@@ -6,7 +6,8 @@
   "repository": "stience/stience-cli",
   "keywords": [
     "stience",
-    "package manager"
+    "package manager",
+    "cli"
   ],
   "author": "Hifumi1337",
   "license": "GPL3",
