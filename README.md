@@ -8,10 +8,16 @@ Currently, the CLI can only install packages from NPM registry.
 
 ### Usage
 
+Install the CLI tool globally:
 ```bash
-npm install stience
+npm install stience@latest -g
 ```
 
+Depending on how you've got your PATH configured, you can run Stience by using npx or directly:
 ```bash
+# Example 1
 stience install <PackageName>
+
+# Example 2
+npx stience install <PackageName>
 ```

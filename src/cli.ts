@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*
     Stience CLI
     Owner: Stience (https://github.com/stience)

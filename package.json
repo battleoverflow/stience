@@ -1,8 +1,8 @@
 {
   "name": "stience",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Containerized package & dependency manager",
-  "main": "dist/index.js",
+  "main": "bin/index.js",
   "repository": "stience/stience-cli",
   "keywords": [
     "stience",
@@ -12,10 +12,10 @@
   "license": "GPL3",
   "private": false,
   "bin": {
-    "stience": "dist/cli.js"
+    "stience": "./bin/cli.js"
   },
   "files": [
-    "dist"
+    "bin"
   ],
   "scripts": {
     "dev": "tsc -p . -w",
