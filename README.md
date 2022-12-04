@@ -2,11 +2,11 @@
 
 Stience is a containerized package & dependecy manager
 
-Stience was created to assist developers in maintaing their projects using a Dockerized approach. The Stience is still in a very early alpha state, so expect breaking changes.
-
-Currently, the CLI can only install packages from NPM registry.
+Stience was created to assist developers in maintaing their projects using a Dockerized approach. The Stience CLI is still in a very early alpha state, so expect breaking changes when using.
 
 ### Usage
+
+NOTE: All versions prior to `v0.0.7` will not work at all.
 
 Install the CLI tool globally:
 ```bash
@@ -20,4 +20,9 @@ stience install <PackageName>
 
 # Example 2
 npx stience install <PackageName>
+```
+
+If you already have a `package.json` file present, you can just run install like normal:
+```bash
+stience install
 ```
