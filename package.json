@@ -1,6 +1,6 @@
 {
   "name": "stience",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Containerized package & dependency manager",
   "main": "bin/index.js",
   "repository": "stience/stience-cli",

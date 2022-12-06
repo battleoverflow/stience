@@ -16,19 +16,21 @@ const dockConfig = () => {
           console.error(`exec error: ${err}`)
           return
         }
+
         console.log(`stdout: ${stdout}`)
         console.error(`stderr: ${stderr}`)
     })
 
     // Run Docker container
-    // exec('docker run -p 0.0.0.0:1337:1337 stience-dock', (err, stdout, stderr) => {
-    //     if (err) {
-    //       console.error(`exec error: ${err}`)
-    //       return
-    //     }
-    //     console.log(`stdout: ${stdout}`)
-    //     console.error(`stderr: ${stderr}`)
-    // })
+    exec('docker run -p 0.0.0.0:1337:1337 stience-dock', (err, stdout, stderr) => {
+        if (err) {
+          console.error(`exec error: ${err}`)
+          return
+        }
+
+        console.log(`stdout: ${stdout}`)
+        console.error(`stderr: ${stderr}`)
+    })
 }
 
 export default async function() {
@@ -40,6 +42,7 @@ export default async function() {
 
         switch (configRes.config) {
             case "node":
+                console.log("Docker container running: http://localhost:1337")
                 dockConfig()
         }
     });

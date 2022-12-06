@@ -4,7 +4,6 @@
 */
 
 import logUpdate from "log-update"
-// import ProgressBar from "progress"
 import ProgressBar from "ascii-progress"
 
 let progressBar: ProgressBar
