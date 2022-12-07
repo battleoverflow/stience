@@ -3,7 +3,7 @@
   "version": "0.0.9",
   "description": "Containerized package & dependency manager",
   "main": "bin/index.js",
-  "repository": "stience/stience-cli",
+  "repository": "stience/cli",
   "keywords": [
     "stience",
     "package manager",
