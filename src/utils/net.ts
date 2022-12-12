@@ -1,6 +1,7 @@
 /*
-    Stience CLI
-    Owner: Stience (https://github.com/stience)
+    Owner: CyberSuki (https://github.com/cybersuki)
+    Project: Stience
+    License: BSD 2-Clause
 */
 
 // NOTE: This file uses JSON data, so the `name` and `version` data points are not the same as `pkgName` and `pkgVersion`. They get assigned later.

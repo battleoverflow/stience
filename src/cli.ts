@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 /*
-    Stience CLI
-    Owner: Stience (https://github.com/stience)
+    Owner: CyberSuki (https://github.com/cybersuki)
+    Project: Stience
+    License: BSD 2-Clause
 */
 
 import yargs from "yargs"
@@ -20,11 +21,11 @@ yargs
     .alias("h", "help")
     .command(
         "install",
-        "install dependencies",
+        "Install package dependencies",
         (argv) => {
             argv.option("production", {
                 type: "boolean",
-                description: "Install dependencies"
+                description: "Install package dependencies"
             })
 
             argv.boolean("save-dev")
@@ -36,12 +37,22 @@ yargs
         pm
     )
     .command(
+        "dock",
+        "Install package dependencies inside of Docker",
+        (argv) =>
+            argv.option("docker", {
+                type: "boolean",
+                description: "Install package dependencies inside of Docker"
+            }),
+        pm
+    )
+    .command(
         "*",
-        "Install dependencies",
+        "Install package dependencies",
         (argv) =>
             argv.option("production", {
                 type: "boolean",
-                description: "Install production dependencies"
+                description: "Install production package dependencies"
             }),
         pm
     )

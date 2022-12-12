@@ -1,10 +1,10 @@
 /*
-    Stience CLI
-    Owner: Stience (https://github.com/stience)
+    Owner: CyberSuki (https://github.com/cybersuki)
+    Project: Stience
+    License: BSD 2-Clause
 */
 
 import logUpdate from "log-update"
-// import ProgressBar from "progress"
 import ProgressBar from "ascii-progress"
 
 let progressBar: ProgressBar

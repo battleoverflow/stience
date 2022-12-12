@@ -1,6 +1,7 @@
 /*
-    Stience CLI
-    Owner: Stience (https://github.com/stience)
+    Owner: CyberSuki (https://github.com/cybersuki)
+    Project: Stience
+    License: BSD 2-Clause
 */
 
 import * as fs from "fs-extra"
@@ -9,7 +10,7 @@ import * as log from "../utils/logger"
 
 import fetch from "node-fetch"
 
-export default async function (pkgName: string, pkgUrl: string, loc = "") {
+export default async function(pkgName: string, pkgUrl: string, loc = "") {
     // Set node_modules directory for installation
     const installPath = `${process.cwd()}${loc}/node_modules/${pkgName}`
 
