@@ -1,14 +1,16 @@
 <h1 align="center">
     <img src=".github/assets/stience_logo.png" />
     <br />
-    Stience CLI
+    Stience
 </h1>
 
 <p align="center">
     <b>Stience CLI is currently in an early alpha state, which means it may break.</b>
 </p>
 
-Stience CLI is a containerized package & dependecy manager built to assist developers with maintaining and optimizing their local development environment. Stience CLI currently uses a dockerized approach, offering a custom Docker container for offsite `node_modules` available over a network connection. The architecture is simple. The CLI offers two seperate commands, install and dock. The install command works just like `npm` or `yarn`, it installs packages based on the `package.json` file and then populates the `node_modules` directory. The dock command builds a Docker container and boots up a local server hosting the `node_modules`.
+Stience is a web development and maintenance CLI created for developers to better focus on their project, not the setup.
+
+Stience is many things (or will eventually become many things), but some of the current features are containerized package and dependecy management and package installation to a local modules directory. Stience was created to assist developers with maintaining and optimizing their local development environment. Stience CLI currently uses a Docker approach, offering a custom Docker container for `node_modules` available over a network connection. The architecture is simple. The CLI currently offers two seperate commands, install and dock. The install command works just like `npm` or `yarn`, it installs packages based on the `package.json` file and then populates the `node_modules` directory. The dock command builds a Docker container and boots up a local server hosting the `node_modules` on port 1337.
 
 This will host the `node_modules` under `http://localhost:1337/node_modules`.
 
