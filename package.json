@@ -1,14 +1,14 @@
 {
   "name": "stience",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Containerized package & dependency manager",
   "main": "bin/index.js",
-  "repository": "cybersuki/stience",
+  "repository": "hifumi1337/stience",
   "keywords": [
     "stience",
     "package manager",
     "cli",
-    "cybersuki"
+    "hifumi1337"
   ],
   "author": "Hifumi1337",
   "license": "BSD-2-Clause",
