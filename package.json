@@ -3,14 +3,14 @@
   "version": "0.0.11",
   "description": "Containerized package & dependency manager",
   "main": "bin/index.js",
-  "repository": "hifumi1337/stience",
+  "repository": "azazelm3dj3d/stience",
   "keywords": [
     "stience",
     "package manager",
     "cli",
-    "hifumi1337"
+    "azazelm3dj3d"
   ],
-  "author": "Hifumi1337",
+  "author": "azazelm3dj3d",
   "license": "BSD-2-Clause",
   "private": false,
   "bin": {

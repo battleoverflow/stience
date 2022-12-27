@@ -1,5 +1,5 @@
 /*
-    Owner: Hifumi1337 (https://github.com/hifumi1337)
+    Owner: azazelm3dj3d (https://github.com/azazelm3dj3d)
     Project: Stience
     License: BSD 2-Clause
 */
@@ -9,8 +9,7 @@ import { exec } from "child_process"
 
 const dockConfig = () => {
     // TODO: Add network download request to download specified Dockerfile from stience.json
-    // This should be located on GitHub (repo), allowing a raw download
-
+    
     // Build Docker container
     exec('docker build . -t stience-dock', (err, stdout, stderr) => {
         if (err) {

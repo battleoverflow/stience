@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /*
-    Owner: Hifumi1337 (https://github.com/hifumi1337)
+    Owner: azazelm3dj3d (https://github.com/azazelm3dj3d)
     Project: Stience
     License: BSD 2-Clause
 */

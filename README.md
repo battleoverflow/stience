@@ -18,7 +18,7 @@ The current version of the CLI requires a Dockerfile in the same directory.
 
 ### Usage
 
-NOTE: All versions prior to `v0.0.7` will not work.
+NOTE: All versions before `v0.0.7` will not work.
 
 Install the CLI tool globally:
 ```bash
