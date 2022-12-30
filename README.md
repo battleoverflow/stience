@@ -1,7 +1,5 @@
 <h1 align="center">
-    <img src=".github/assets/stience_logo.png" />
-    <br />
-    Stience
+    <img src="https://raw.githubusercontent.com/azazelm3dj3d/stience/main/.github/assets/stience_logo.png" />
 </h1>
 
 <p align="center">

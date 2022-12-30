@@ -1,6 +1,6 @@
 {
   "name": "stience",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Containerized package & dependency manager",
   "main": "bin/index.js",
   "repository": "azazelm3dj3d/stience",
