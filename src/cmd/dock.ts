@@ -6,30 +6,34 @@
 
 import * as fs from "fs-extra"
 import { exec } from "child_process"
+import axios from 'axios'
 
 const dockConfig = () => {
-    // TODO: Add network download request to download specified Dockerfile from stience.json
+    const dockerUrl = 'https://raw.githubusercontent.com/shinigamilib/DockDB/main/DockDB/node/19/Dockerfile';
+
+    axios({
+        method: 'get',
+        url: dockerUrl,
+        responseType: 'stream'
+    }).then((response: { data: { pipe: (arg0: fs.WriteStream) => void; }; }) => {
+        response.data.pipe(fs.createWriteStream('Dockerfile'));
+    });
+
     
     // Build Docker container
-    exec('docker build . -t stience-dock', (err, stdout, stderr) => {
+    exec('docker build . -t stience-dock', (err) => {
         if (err) {
-          console.error(`exec error: ${err}`)
+          console.error(`Docker build error: ${err}`)
           return
         }
-
-        console.log(`stdout: ${stdout}`)
-        console.error(`stderr: ${stderr}`)
     })
 
     // Run Docker container
-    exec('docker run -p 0.0.0.0:1337:1337 stience-dock', (err, stdout, stderr) => {
+    exec('docker run -p 0.0.0.0:1337:1337 stience-dock', (err) => {
         if (err) {
-          console.error(`exec error: ${err}`)
+          console.error(`Docker run error: ${err}`)
           return
         }
-
-        console.log(`stdout: ${stdout}`)
-        console.error(`stderr: ${stderr}`)
     })
 }
 
