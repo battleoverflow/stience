@@ -33,11 +33,34 @@ export const buildDocker = () => {
 
 export default async function dock() {
     // Reads configuration file to determine Docker configuration
-    fs.readFile("stience.json", "utf-8", function (err: any, config: string) {
-        if (err) throw err
+    fs.readFile(
+        "stience.json",
+        "utf-8",
+        function (err: any, userConfig: string) {
+            if (err) {
+                // If no config file is provided, default to the example
+                fs.readFile(
+                    "stience.example.json",
+                    "utf-8",
+                    function (err: any, exampleConfig: string) {
+                        if (err) throw err
 
-        let configRes = JSON.parse(config)
+                        let configRes = JSON.parse(exampleConfig)
+                        dockConfig(configRes.config, configRes.version)
+                        console.log(
+                            "Missing 'stience.json' config. Using 'stience.example.json' file instead"
+                        )
+                    }
+                )
+                return false
+            }
 
-        dockConfig(configRes.config, configRes.version)
-    })
+            let configRes = JSON.parse(userConfig)
+            dockConfig(configRes.config, configRes.version)
+            console.log(
+                "Successfully generated Dockerfile using 'stience.json' config"
+            )
+        }
+    )
+    return true
 }

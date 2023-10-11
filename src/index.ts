@@ -21,9 +21,9 @@ export default async function (args: yargs.Arguments) {
     // Checks which argument is being passed in CLI
     if (args._[0] == "dock") {
         // Runs docker command for external package access
-        
+
         if (args._[1] == "create") {
-            dock.default()
+            await dock.default()
         }
 
         if (args._[1] == "build") {
