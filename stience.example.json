@@ -1,3 +1,4 @@
 {
-    "config": "node"
+    "config": "node",
+    "version": "19"
 }

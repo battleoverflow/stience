@@ -25,9 +25,9 @@ export function resolveLog(pkgName: string) {
 // Progress bar for monitoring installation
 export function prepareInstallation(count: number) {
     logUpdate("[🚀] Resolving complete")
-    
+
     progressBar = new ProgressBar({
-        schema: '[:bar.green] (:current/:total) :percent :elapseds',
+        schema: "[:bar.green] (:current/:total) :percent :elapseds",
         total: count - 1
     })
 }
