@@ -105,6 +105,7 @@ dist
 
 # Stience
 stience.lock
+stience.json
 bin/
 
 # Testing

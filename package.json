@@ -1,51 +1,61 @@
 {
-  "name": "stience",
-  "version": "0.0.12",
-  "description": "Containerized package & dependency manager",
-  "main": "bin/index.js",
-  "repository": "azazelm3dj3d/stience",
-  "keywords": [
-    "stience",
-    "package manager",
-    "cli",
-    "azazelm3dj3d"
-  ],
-  "author": "azazelm3dj3d",
-  "license": "BSD-2-Clause",
-  "private": false,
-  "bin": {
-    "stience": "./bin/cli.js"
-  },
-  "files": [
-    "bin"
-  ],
-  "scripts": {
-    "dev": "tsc -p . -w",
-    "build": "tsc -p .",
-    "testBuild": "npm run build",
-    "pretty": "npx prettier --write ."
-  },
-  "dependencies": {
-    "ascii-progress": "^2.0.0",
-    "find-up": "^4.1.0",
-    "fs-extra": "^7.0.0",
-    "js-yaml": "^3.12.0",
-    "log-update": "^2.3.0",
-    "node-fetch": "^2.2.0",
-    "prettier": "^2.7.1",
-    "semver": "^5.5.1",
-    "tar": "^4.4.6",
-    "yargs": "^12.0.1"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^5.0.4",
-    "@types/js-yaml": "^3.11.2",
-    "@types/log-update": "^2.0.0",
-    "@types/node-fetch": "^2.1.2",
-    "@types/progress": "^2.0.1",
-    "@types/semver": "^5.5.0",
-    "@types/tar": "^4.0.0",
-    "@types/yargs": "^11.1.1",
-    "typescript": "^4.9.3"
-  }
+    "name": "stience",
+    "version": "0.0.13",
+    "description": "Containerized package & dependency manager",
+    "main": "bin/index.js",
+    "repository": "azazelm3dj3d/stience",
+    "keywords": [
+        "stience",
+        "package manager",
+        "cli",
+        "azazelm3dj3d"
+    ],
+    "author": {
+        "name": "azazelm3dj3d",
+        "url": "https://github.com/azazelm3dj3d"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/azazelm3dj3d/"
+        }
+    ],
+    "license": "BSD-2-Clause",
+    "private": false,
+    "bin": {
+        "stience": "./bin/cli.js"
+    },
+    "files": [
+        "bin"
+    ],
+    "scripts": {
+        "dev": "tsc -p . -w",
+        "build": "tsc -p .",
+        "testBuild": "npm run build",
+        "pretty": "npx prettier --write ."
+    },
+    "dependencies": {
+        "ascii-progress": "^2.0.0",
+        "axios": "^1.2.2",
+        "find-up": "^4.1.0",
+        "fs-extra": "^7.0.0",
+        "js-yaml": "^3.12.0",
+        "log-update": "^2.3.0",
+        "node-fetch": "^2.2.0",
+        "prettier": "^2.7.1",
+        "semver": "^5.5.1",
+        "tar": "^4.4.6",
+        "yargs": "^12.0.1"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^5.0.4",
+        "@types/js-yaml": "^3.11.2",
+        "@types/log-update": "^2.0.0",
+        "@types/node-fetch": "^2.1.2",
+        "@types/progress": "^2.0.1",
+        "@types/semver": "^5.5.0",
+        "@types/tar": "^4.0.0",
+        "@types/yargs": "^11.1.1",
+        "typescript": "^4.9.3"
+    }
 }

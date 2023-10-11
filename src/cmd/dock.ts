@@ -6,44 +6,61 @@
 
 import * as fs from "fs-extra"
 import { exec } from "child_process"
+import axios from "axios"
 
-const dockConfig = () => {
-    // TODO: Add network download request to download specified Dockerfile from stience.json
-    
-    // Build Docker container
-    exec('docker build . -t stience-dock', (err, stdout, stderr) => {
-        if (err) {
-          console.error(`exec error: ${err}`)
-          return
-        }
+const dockConfig = (typeOfDockerfile: any, version: any) => {
+    const dockerUrl = `https://raw.githubusercontent.com/azazelm3dj3d/DockDB/main/DockDB/${typeOfDockerfile}/${version}/Dockerfile`
 
-        console.log(`stdout: ${stdout}`)
-        console.error(`stderr: ${stderr}`)
-    })
-
-    // Run Docker container
-    exec('docker run -p 0.0.0.0:1337:1337 stience-dock', (err, stdout, stderr) => {
-        if (err) {
-          console.error(`exec error: ${err}`)
-          return
-        }
-
-        console.log(`stdout: ${stdout}`)
-        console.error(`stderr: ${stderr}`)
+    axios({
+        method: "get",
+        url: dockerUrl,
+        responseType: "stream"
+    }).then((response: { data: { pipe: (arg0: fs.WriteStream) => void } }) => {
+        response.data.pipe(fs.createWriteStream("Dockerfile"))
     })
 }
 
-export default async function() {
-    // Reads configuration file to determine Docker configuration
-    fs.readFile("stience.json", "utf-8", function(err: any, config: string) {
-        if (err) throw err
-
-        let configRes = JSON.parse(config)
-
-        switch (configRes.config) {
-            case "node":
-                console.log("Docker container running: http://localhost:1337")
-                dockConfig()
+export const buildDocker = () => {
+    // Build Docker container
+    exec("docker build . -t stience-dock", (err: any) => {
+        if (err) {
+            console.error(`Docker build error: ${err}`)
+            return false
         }
-    });
+    })
+    return true
+}
+
+export default async function dock() {
+    // Reads configuration file to determine Docker configuration
+    fs.readFile(
+        "stience.json",
+        "utf-8",
+        function (err: any, userConfig: string) {
+            if (err) {
+                // If no config file is provided, default to the example
+                fs.readFile(
+                    "stience.example.json",
+                    "utf-8",
+                    function (err: any, exampleConfig: string) {
+                        if (err) throw err
+
+                        let configRes = JSON.parse(exampleConfig)
+                        dockConfig(configRes.config, configRes.version)
+                        console.log(
+                            "Missing 'stience.json' config. Using 'stience.example.json' file instead"
+                        )
+                    }
+                )
+                return false
+            }
+
+            let configRes = JSON.parse(userConfig)
+            dockConfig(configRes.config, configRes.version)
+            console.log(
+                "Successfully generated Dockerfile using 'stience.json' config"
+            )
+        }
+    )
+    return true
 }
