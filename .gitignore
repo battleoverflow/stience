@@ -110,3 +110,5 @@ bin/
 
 # Testing
 Dockerfile
+
+.DS_Store
