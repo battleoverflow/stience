@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://raw.githubusercontent.com/azazelm3dj3d/stience/main/.github/assets/stience_logo.png" />
+    <img src="https://raw.githubusercontent.com/battleoverflow/stience/main/.github/assets/stience_logo.png" />
 </h1>
 
 <p align="center">

@@ -1,23 +1,23 @@
 {
     "name": "stience",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "description": "Containerized package & dependency manager",
     "main": "bin/index.js",
-    "repository": "azazelm3dj3d/stience",
+    "repository": "battleoverflow/stience",
     "keywords": [
         "stience",
         "package manager",
         "cli",
-        "azazelm3dj3d"
+        "battleoverflow"
     ],
     "author": {
-        "name": "azazelm3dj3d",
-        "url": "https://github.com/azazelm3dj3d"
+        "name": "battleoverflow",
+        "url": "https://github.com/battleoverflow"
     },
     "funding": [
         {
             "type": "github",
-            "url": "https://github.com/sponsors/azazelm3dj3d/"
+            "url": "https://github.com/sponsors/battleoverflow/"
         }
     ],
     "license": "BSD-2-Clause",

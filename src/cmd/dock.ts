@@ -1,5 +1,5 @@
 /*
-    Owner: azazelm3dj3d (https://github.com/azazelm3dj3d)
+    Owner: battleoverflow (https://github.com/battleoverflow)
     Project: Stience
     License: BSD 2-Clause
 */
@@ -9,7 +9,7 @@ import { exec } from "child_process"
 import axios from "axios"
 
 const dockConfig = (typeOfDockerfile: any, version: any) => {
-    const dockerUrl = `https://raw.githubusercontent.com/azazelm3dj3d/DockDB/main/DockDB/${typeOfDockerfile}/${version}/Dockerfile`
+    const dockerUrl = `https://raw.githubusercontent.com/battleoverflow/DockDB/main/DockDB/${typeOfDockerfile}/${version}/Dockerfile`
 
     axios({
         method: "get",

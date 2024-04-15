@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /*
-    Owner: azazelm3dj3d (https://github.com/azazelm3dj3d)
+    Owner: battleoverflow (https://github.com/battleoverflow)
     Project: Stience
     License: BSD 2-Clause
 */
